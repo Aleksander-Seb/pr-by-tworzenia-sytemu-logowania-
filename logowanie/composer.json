@@ -1,0 +1,14 @@
+{
+    "name": "awadon/auth-system",
+    "description": "System rejestracji i logowania z weryfikacją e-mail",
+    "type": "project",
+    "require": {
+        "phpmailer/phpmailer": "^6.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "Awadon\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}

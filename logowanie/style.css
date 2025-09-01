@@ -1,0 +1,459 @@
+
+body {
+    background-color: #000;
+    color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 120px 20px 120px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+
+.header_gorny {
+    background-color: #292929;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 80px;
+    position: relative;
+    z-index: 1001;
+    transition: opacity 0.3s ease;
+    box-sizing: border-box;
+}
+
+.logo_i_nazwa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo1 {
+    height: 70px;
+    width: auto;
+}
+
+.nazwa {
+    font-size: 2rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+.pasek_przyciskow {
+    background-color: #1f1f1f;
+    padding: 8px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #444;
+    position: relative;
+    z-index: 1000;
+    transition: top 0.3s ease;
+}
+
+.pasek_przyciskow.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.pasek_przyciskow.show-logo .logo_male {
+    display: block;
+}
+
+.logo_male {
+    display: none;
+    margin-right: 10px;
+}
+
+.logo_male_img {
+    height: 40px;
+    width: auto;
+}
+
+.pasek_przyciskow button,
+.logowanie1 {
+    background-color: #444;
+    border: none;
+    padding: 8px 15px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.pasek_przyciskow button:hover,
+.logowanie1:hover {
+    background-color: #666;
+}
+
+.pasek_przyciskow button {
+    flex: 1 1 100px;
+    max-width: 120px;
+    min-width: 80px;
+}
+
+
+.login {
+    flex: 0 1 auto;
+    min-height: 600px;
+    width: auto;
+    max-width: 300px;
+    min-width: 250px;
+    background-color: #222;
+    border: 2px solid #444;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #000;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 12px;
+    color: #fff;
+    margin-bottom: 80px;
+    overflow: hidden;
+}
+
+.login h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.login label {
+    font-size: 1rem;
+    color: #eee;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.login input,
+.login select,
+.login input[type="date"] {
+    font-size: 1rem;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #666;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.login input[type="submit"] {
+    margin-top: 10px;
+    background-color: #444;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.login input[type="submit"]:hover {
+    background-color: #666;
+}
+
+
+.login select {
+    background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px 16px;
+    padding-right: 35px;
+}
+
+.login select:focus {
+    outline: none;
+    border-color: #00cc88;
+    background-color: #222;
+}
+
+.login option {
+    background-color: #222;
+    color: #ffffff;
+}
+
+.login select option[value="inny"],
+.login select option[value="inny"]:hover,
+.login select option[value="inny"]:focus,
+.login select option[value="inny"]:checked,
+.login select option[value="inny"]:active {
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet) !important;
+    color: #fff !important;
+}
+
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper input {
+    flex: 1;
+}
+
+.toggle-password {
+    margin-left: 5px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #444;
+}
+
+.toggle-password:hover {
+    color: #666;
+}
+
+
+.error {
+    color: #ff4d4d;
+    background-color: #220000;
+    padding: 10px;
+    border: 1px solid #cc0000;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.mailAktywacyjny{
+    color: #ff4d4d;
+    background-color: #220000;
+    padding: 10px;
+    border: 1px solid #cc0000;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.success {
+    color: #00ff99;
+    background-color: #002b1f;
+    padding: 10px;
+    border: 1px solid #00cc88;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+input:-webkit-autofill {
+    background-color: #333 !important;
+    color: #fff !important;
+    box-shadow: 0 0 0 1000px #333 inset !important;
+    -webkit-text-fill-color: #fff !important;
+    border: 1px solid #666;
+}
+
+
+#pasek_informujący {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #1F1F1F;
+    display: flex;
+    border-top: 1px solid #444444;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+    color: #ff0000;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: bottom 0.3s ease;
+}
+
+.informacyjny-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.lewa {
+    width: 50px;
+    height: 50px;
+}
+
+.prawa {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.srodek {
+    font-size: 18px;
+    font-weight: 600;
+    white-space: nowrap;
+    color: #ff0000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#rangaLogoMini {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+#rangaLogoMini img {
+    height: 40px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+#nickUzytkownika {
+    font-size: 24px;
+    font-weight: 600;
+    white-space: nowrap;
+    color: #ffffff;
+    margin-right: auto;
+}
+
+#pasek_informujący form {
+    margin: 0;
+}
+
+#pasek_informujący button {
+    background-color: #333;
+    border: none;
+    color: #fff;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#pasek_informujący button:hover {
+    background-color: #555;
+}
+
+
+.footer_dolny {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #292929;
+    color: #fff;
+    gap: 10px;
+    text-align: center;
+}
+
+.footer-lewo {
+    text-align: left;
+}
+
+.footer-srodek {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.footer-prawo {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.footer-gify {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    grid-column: 1 / -1;
+}
+
+.zalogowany {
+    text-align: center;
+    color: #ff0000;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.absolute-bottom {
+    position: absolute;
+    bottom: auto;
+    top: auto;
+    left: 0;
+    right: 0;
+}
+
+.nick {
+    color: #ff0000;
+}
+
+
+@media (max-width: 600px) {
+    .login {
+        min-width: 90vw;
+        max-width: 98vw;
+        padding: 10px;
+    }
+
+    .login label {
+        font-size: 1.1rem;
+    }
+
+    .login select,
+    .login input[type="date"] {
+        font-size: 1.1rem;
+        padding: 12px;
+    }
+
+    main {
+        padding-bottom: 120px !important;
+    }
+}
+
+
+.login select.inny {
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    color: #fff !important;
+}
+
+.login select option[value="inny"],
+.login select option[value="inny"]:hover,
+.login select option[value="inny"]:focus,
+.login select option[value="inny"]:checked,
+.login select option[value="inny"]:active {
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet) !important;
+    color: #fff !important;
+}
+ .rejestracja_2 {
+
+    margin-top: -95px;
+}
